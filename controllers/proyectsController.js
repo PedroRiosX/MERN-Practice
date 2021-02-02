@@ -20,7 +20,6 @@ exports.createProject = async ( req, res ) => {
         res.json(project);
         
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }
@@ -31,7 +30,6 @@ exports.projectsList = async (req, res) => {
         const projects = await Project.find({owner:req.user.id}).sort({createdate:-1});
         res.json({projects});
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }
@@ -70,7 +68,6 @@ exports.updateProject = async (req,res) => {
         res.json({project});
 
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }
@@ -92,7 +89,6 @@ exports.deleteProject = async (req, res) => {
         res.json({ msg: `Project deleted successed` });
         
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }

@@ -41,7 +41,6 @@ exports.authenticateUser = async (req, res) => {
         });
 
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }
@@ -52,7 +51,6 @@ exports.authenticatedUser = async (req, res) => {
         const user = await User.findById(req.user.id).select('-password');
         res.json({user});
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }

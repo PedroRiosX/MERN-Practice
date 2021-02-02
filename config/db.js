@@ -8,7 +8,7 @@ const connectDatabase = async () => {
             useUnifiedTopology: true,
             useFindAndModify: false
         });
-        console.log(`we're connected bitchies`);
+        console.log(`we're online`);
     } catch (error) {
         console.log(error);
         process.exit(1);

@@ -14,7 +14,6 @@ module.exports = function(req, res, next){
         req.user = coded.user;
         next();
     } catch (error) {
-        console.log(error);
         res.status(401).send(`Token not valid`);
     }
 }

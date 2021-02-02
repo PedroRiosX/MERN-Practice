@@ -23,7 +23,6 @@ exports.activitiesList = async (req, res) => {
         res.json({activities});
 
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }
@@ -54,7 +53,6 @@ exports.createActivity = async (req, res) => {
         await activity.save();
         res.json({ msg: `Activity ${activity.name} has been added`});
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }
@@ -88,7 +86,6 @@ exports.updateActivity = async (req, res) => {
         res.json({activity});
         
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }
@@ -114,7 +111,6 @@ exports.deleteActivity = async (req, res) =>{
        res.json({msg: `The activity ${activity.name} has been deleted`})
         
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }

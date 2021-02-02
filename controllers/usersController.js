@@ -44,7 +44,6 @@ exports.createUser = async (req, res) =>{
             res.json({ token: token });
         });
     } catch (error) {
-        console.log(error);
         res.status(500).send('Have been a bug, sorry');
     }
 }
